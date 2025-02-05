@@ -1,92 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OperatorHub Clone</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f8f9fa;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        input[type="text"] {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .operators {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-        }
-        .operator-card {
-            background: white;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            width: 250px;
-        }
-        .operator-card h3 {
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>OperatorHub Clone</h1>
-        <input type="text" id="search" placeholder="Search for an operator..." onkeyup="filterOperators()">
-        <div class="operators" id="operator-list">
-            <!-- Operator cards will be injected here -->
-        </div>
-    </div>
-
-    <script>
-        const operators = [
-            { name: "Database Operator", description: "Manages database deployments." },
-            { name: "Monitoring Operator", description: "Handles monitoring and alerting." },
-            { name: "Storage Operator", description: "Manages persistent storage solutions." },
-            { name: "Security Operator", description: "Ensures secure deployments." }
-        ];
-
-        function displayOperators() {
-            const container = document.getElementById('operator-list');
-            container.innerHTML = '';
-            operators.forEach(operator => {
-                const card = document.createElement('div');
-                card.className = 'operator-card';
-                card.innerHTML = `<h3>${operator.name}</h3><p>${operator.description}</p>`;
-                container.appendChild(card);
-            });
-        }
-
-        function filterOperators() {
-            const query = document.getElementById('search').value.toLowerCase();
-            const filtered = operators.filter(op => op.name.toLowerCase().includes(query));
-            const container = document.getElementById('operator-list');
-            container.innerHTML = '';
-            filtered.forEach(operator => {
-                const card = document.createElement('div');
-                card.className = 'operator-card';
-                card.innerHTML = `<h3>${operator.name}</h3><p>${operator.description}</p>`;
-                container.appendChild(card);
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", displayOperators);
-    </script>
-</body>
+    <title>Pure React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
