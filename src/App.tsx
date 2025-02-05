@@ -4,7 +4,8 @@ const operators = [
     { name: "Database Operator", description: "Manages database deployments." },
     { name: "Monitoring Operator", description: "Handles monitoring and alerting." },
     { name: "Storage Operator", description: "Manages persistent storage solutions." },
-    { name: "Security Operator", description: "Ensures secure deployments." }
+    { name: "Security Operator", description: "Ensures secure deployments." },
+    { name: "Security Operator", description: "Ensures secure deployments." } // rm
 ];
 
 const App = () => {
