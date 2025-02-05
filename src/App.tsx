@@ -1,10 +1,11 @@
 import React from "react";
 
 const operators = [
-    { name: "Database Operator", description: "Manages database deployments." },
-    { name: "Monitoring Operator", description: "Handles monitoring and alerting." },
-    { name: "Storage Operator", description: "Manages persistent storage solutions." },
-    { name: "Security Operator", description: "Ensures secure deployments." }
+    { name: "Dapr", description: "Dapr description." },
+    { name: "Kubecost", description: "Kubecost description." },
+    { name: "Ingress Nginx", description: "Ingress Nginx description." },
+    { name: "ArgoCD", description: "ArgoCD description." },
+    { name: "Kyverno", description: "Kyverno description." }
 ];
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
 
     return (
         <div style={{ textAlign: "center", backgroundColor: "#f8f9fa", padding: "20px" }}>
-            <h1>OperatorHub Clone</h1>
+            <h1>K0rdent Catalog</h1>
             <input
                 type="text"
                 value={search}
