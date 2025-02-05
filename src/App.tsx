@@ -28,13 +28,7 @@ const App = () => {
             />
             <div style={{ display: "flex", flexWrap: "wrap", gap: "15px", justifyContent: "center" }}>
                 {filteredOperators.map((operator, index) => (
-                    <div key={index} style={{
-                        background: "white",
-                        padding: "15px",
-                        borderRadius: "5px",
-                        boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
-                        width: "250px"
-                    }}>
+                    <div key={index} className="operator-card">
                         <h3>{operator.name}</h3>
                         <p>{operator.description}</p>
                     </div>
